@@ -36,16 +36,10 @@ read -p "Do you want to make a QR Code Of The Masked Phishing Url? (Y/n) " respo
  if [[ $response == "Y" ]]; then
   echo -e "\033[38;5;47m\033[0m"
 cd QR_CODES  
-    curl qrenco.de/$custom_url > $custom_url.txt
+    curl qrenco.de/$custom_url > $RANDOM.txt
 echo -e "\033[38;5;40m\033[0m"
 
 
 echo -e "\\033[35mQr Code Has Been Saved in "QR_CODES" Folder.\\033[0m"
 echo -e "\\033[35m\\033[0m"
 echo -e "\\033[35mPress Enter To Exit.\\033[0m"
-read 
-
-else
-    
-    exit
-fi
