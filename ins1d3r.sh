@@ -36,9 +36,21 @@ read -p "Do you want to make a QR Code Of The Masked Phishing Url? (Y/n) " respo
 if [[ $response == "Y" ]]; then
   echo -e "\033[38;5;47m\033[0m"  
     curl qrenco.de/$custom_url
+echo -e "\033[38;5;47m\033[0m"
 
-read 
+read -p "Do You Want To Save Your QR Code As A Txt File? (Y/n) " rep
 
+if [[ $rep == "Y" ]]; then
+echo -e "\033[38;5;47m\033[0m"
+read -p "Enter Txt File Name: " nm
+ curl qrenco.de/$custom_url >> $nm.txt
+echo -e "\033[38;5;47m\033[0m"
+echo -e "\033[38;5;47m Your File Has Been Saved As /home/kali/$nm.txt Press Enter To exit\033[0m"
+read
+exit
+else
+exit
+fi
 else
     
     exit
