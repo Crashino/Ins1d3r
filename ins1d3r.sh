@@ -8,7 +8,7 @@ echo -e "\033[38;5;49m██║██║ ╚████║███████
 echo -e "\033[38;5;50m╚═╝╚═╝  ╚═══╝╚══════╝ ╚═╝╚═════╝ ╚═════╝ ╚═╝  ╚═╝\033[0m"
 echo -e "\033[38;5;47m\033[0m" 
 
-echo -e "\033[38;5;40m[•] Enter Phishing Website:\033[0m"
+echo -e "\033[38;5;40m[•] Enter Phishing Website(Add https://):\033[0m"
 read long_url
 
 
@@ -30,7 +30,7 @@ SHORET_URL=$(curl -s "http://da.gd/s/?url=$long_url")
 echo -e "\033[38;5;40m[•] Masked Phishing Link Generated: $custom_url\033[0m"
 
 echo -e "\033[38;5;47m[•] Shortened Url(is.gd): https://$short_url\033[0m"
-echo -e "\033[38;5;47m[•] Shortened Url(da.gd): https://$SHORET_URL\033[0m"
+echo -e "\033[38;5;47m[•] Shortened Url(da.gd): $SHORET_URL\033[0m"
 echo -e "\033[38;5;47m\033[0m" 
 read -p "[?] Do you want to make a QR Code Of The Masked Phishing Url? (Y/n) " response
 
