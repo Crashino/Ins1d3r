@@ -15,7 +15,7 @@ read long_url
 
 short_url=$(curl -s https://is.gd/create.php\?format\=simple\&url\=$long_url)
 
-echo -e "\033[38;5;40m[•] Enter Custom Domain:\033[0m"
+echo -e "\033[38;5;40m[•] Enter Custom Domain(You can also use social engineering words.Example: www.google.com-login):\033[0m"
 read custom_domain
 
 
