@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 clear
 echo -e "\033[38;5;28m██╗███╗   ██╗███████╗ ██╗██████╗ ██████╗ ██████╗ \033[0m"
 echo -e "\033[38;5;40m██║████╗  ██║██╔════╝███║██╔══██╗╚════██╗██╔══██╗\033[0m"
@@ -8,14 +8,11 @@ echo -e "\033[38;5;49m██║██║ ╚████║███████
 echo -e "\033[38;5;50m╚═╝╚═╝  ╚═══╝╚══════╝ ╚═╝╚═════╝ ╚═════╝ ╚═╝  ╚═╝\033[0m"
 echo -e "\033[38;5;47m\033[0m" 
 
-
 echo -e "\033[38;5;40m[•] Enter Url:\033[0m"
 
 read URL
 
-
-FINAL_URL=$(curl -Ls -o /dev/null -w %{url_effective} "$URL")
-
+FINAL_URL=$(curl -Ls -o /dev/null -w %{url_effective} --max-redirs 1 "$URL")
 
 echo -e "\033[38;5;40m[•] You will be redirected to: $FINAL_URL\033[0m"
 echo -e "\033[38;5;47m\033[0m"
