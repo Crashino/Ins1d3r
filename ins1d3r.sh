@@ -50,10 +50,13 @@ echo -e "\033[38;5;47m\033[0m"
 echo -e "\033[38;5;47m [•] Your File Has Been Saved As /home/kali/Ins1d3r/$nm.txt Press Enter To exit\033[0m"
 read
 exit
+clear
 else
+clear
 exit
 fi
 else
     
     exit
+    clear
 fi
